@@ -1,0 +1,139 @@
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+header > div{
+    display: flex;
+}
+.logo{
+    cursor: pointer;
+}
+i{
+    cursor: pointer;
+}
+.icons{
+    cursor: pointer;
+}
+.nav_bar li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 20px;
+    
+}
+.nav_bar li a{
+    text-decoration: none;
+}
+input{
+    border-radius: 20px;
+    background: #eaeaea;
+    border: none;
+    padding: 11px 35px;  
+    
+}
+.icons{
+    font-size: 25px;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+
+    
+}
+a:after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+a:hover:after{
+    width: 100%;
+}
+
+/* body */
+.strip{
+    display: flex;
+    height: 80px;
+    width: 90%;
+    margin: 10px 0px;
+        margin: auto;
+    background-color: #e8edf0;
+}
+.strip > div{
+    display: flex;
+    width: 90%;
+    padding: 10px 20px;
+    margin: 0 20px;
+}
+.strip>h2{
+    padding-top: 20px;
+}
+.strip > div>h3{
+    padding: 0px 20px;
+}
+.strip>div img{
+    width: 70px;
+}
+
+.container> #mid_pic{
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+
+/* category */
+.category{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+.category > div{
+   display: grid; 
+   grid-template-columns: repeat(8, 1fr);
+   padding-left: 30px;
+   padding-top: 30px;
+}
+.category > div >div{
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* footer */
+ #border-box{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+ }
+ #border-box> p{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    padding: 30px 0px;
+ }
+
+
+
+
+
+
+
