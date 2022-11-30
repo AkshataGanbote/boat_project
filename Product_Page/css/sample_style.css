@@ -1,11 +1,6 @@
 h1 {
     font-family: Montserrat;
-    background-color: grey;
-}
-
-img {
-    width: 100%;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(247, 245, 245);
 }
 
 #parent {
@@ -14,15 +9,25 @@ img {
     gap: 20px;
     margin: 20px;
     place-content: center;
-    font-weight: 600;
 }
 
 .card {
     text-align: center;
 }
 
+img {
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+}
+
 .name {
     padding: 10px 0;
+}
+
+.rev {}
+
+.discount {
+    color: rgb(5, 161, 67);
 }
 
 .priceparent {
@@ -32,8 +37,6 @@ img {
 }
 
 .price {
-    background-color: black;
-    color: white;
     font-weight: bold;
     border-radius: 5x;
     padding: 5px 10px;
@@ -42,8 +45,6 @@ img {
 .strprice {
     text-decoration: line-through;
     padding: 3px 10px;
-    border: 2px solid;
-    border-radius: 5px;
 }
 
 .cartbtn {

@@ -1,0 +1,162 @@
+/* When zoom out & in div boxes not getting away from each other */
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+/* Font Family */
+
+body {}
+
+div>h1 {
+    background-color: rgb(247, 245, 245);
+    display: block;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+#filSort {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+
+}
+
+#filter {
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#sort {
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* When zoom out & in div boxes not getting away from each other */
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    /* min-height: 100vh; */
+}
+
+#parent {
+    /* position:relative;
+    width:1000px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap: wrap; */
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    /* grid-template-rows: 200px 200px 200px; */
+    gap: 50px 20px;
+    margin: 10px;
+    place-content: center;
+}
+
+/* .card {
+    width: 600px;
+    height: 100%;
+} */
+
+#parent .card {
+    position: relative;
+    max-width: 500px;
+    max-height: 500px;
+    /* background: grey; */
+    /* margin:10px; */
+    /* padding:15px; */
+    display: flex;
+    border: 3px solid rgb(231, 231, 231);
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    border-radius: 15px;
+}
+
+#parent .card .imgBx {
+    /* max-width: 150px; */
+    /* flex: 0 0 0 150px; */
+}
+
+/* #parent .card .imgBx img{
+    max-width: 100%;
+} */
+
+#parent .card .description {
+    margin: 10px 10px;
+    text-align: justify;
+    /* background-color: aqua; */
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(245, 245, 245);
+}
+
+.description>.name {
+    /* padding: 10px 0; */
+
+}
+
+.rev {}
+
+.discount {
+    color: rgb(5, 161, 67);
+
+}
+
+.priceparent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.priceparent.price {
+    font-weight: bold;
+
+}
+
+.strprice {
+    text-decoration: line-through;
+
+}
+
+.cartbtn {
+    display: block;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 100%;
+    font-weight: bold;
+    /* margin: 10px 0; */
+    font-size: 15px;
+
+}
+
+
+/* 
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+    #main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 720px) {
+    #main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} */
