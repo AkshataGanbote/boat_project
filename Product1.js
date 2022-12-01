@@ -1,50 +1,11 @@
-<!-- For horizontal arrangement -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rockerz Headphones</title>
-    <!-- Linked css sheet -->
-    <link rel="stylesheet" href="../css/style1.css">
-
-    <!-- CSS StyleSheets -->          
-
-</head>
-<body>
-    <div>
-        <p><span style="color:grey">Home . </span>Rockerz Headphones</p>
-        <h1>Rockerz Headphones</h1>
-        <div id="filSort">
-            <select id="filter">
-                <option>Show filters</option>
-                <option>Availability</option>
-                <option>Price</option>
-            </select>
-            <select onchange ="sortFun()" id="sort">
-                <option>Sort by <span><b>Featured</b></span></option>
-                <option>Price, low to high</option>
-                <option>Price, high to low</option>
-            </select>
-        </div>
-    </div>
-    <div id="main">
-        <div id="parent">
-            
-        </div>
-    </div>
-</body>
-</html>
-<script>
     var rockHead= [
         {
             img_link: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/m1_dac5a6b1-7937-4cdf-be70-76bb5a1fcf49_600x.png?v=1639153081",
             name: "Rockerz 333 Pro",
             rev: "4.9 | 154 reviews",
             discount:"40% off",
-            price: "1,799",
+            price: "1799",
             strikedoffprice: "2,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -53,7 +14,7 @@
             name: "Rockerz 450 DC edition",
             rev: "5.0 | 4 reviews",
             discount:"62% off",
-            price: "1,499",
+            price: "1499",
             strikedoffprice: "3,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -62,7 +23,7 @@
             name: "Rockerz 450",
             rev: "4.9 | 8 reviews",
             discount:"62% off",
-            price: "1,499",
+            price: "1499",
             strikedoffprice: "3,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -71,7 +32,7 @@
             name: "Rockerz 550",
             rev: "4.8 | 354 reviews",
             discount:"64% off",
-            price: "1,799",
+            price: "1799",
             strikedoffprice: "4,999",
             save: "Save ₹15 more on UPI payment",
         },
@@ -80,7 +41,7 @@
             name: "Rockerz 330 Pro",
             rev: "4.9 | 47 reviews",
             discount:"40% off",
-            price: "1,799",
+            price: "1799",
             strikedoffprice: "2,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -89,7 +50,7 @@
             name: "Rockerz 518",
             rev: "4.9 | 154 reviews",
             discount:"67% off",
-            price: "1,299",
+            price: "1299",
             strikedoffprice: "3,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -98,7 +59,7 @@
             name: "Rockerz 460",
             rev: "4.9 | 27 reviews",
             discount:"28% off",
-            price: "1,799",
+            price: "1799",
             strikedoffprice: "2,490",
             save: "Save ₹15 more on UPI payment",
         },
@@ -107,7 +68,7 @@
             name: "Rockerz 510",
             rev: "4.8 | 142 reviews",
             discount:"54% off",
-            price: "1,599",
+            price: "1599",
             strikedoffprice: "3,490",
             save: "Save ₹15 more on UPI payment",
         },
@@ -116,7 +77,7 @@
             name: "Rockerz 450R",
             rev: "5.0 | 10 reviews",
             discount:"67% off",
-            price: "1,299",
+            price: "1299",
             strikedoffprice: "3,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -125,7 +86,7 @@
             name: "Rockerz 370",
             rev: "4.8 | 89 reviews",
             discount:"52% off",
-            price: "1,199",
+            price: "1199",
             strikedoffprice: "2,499",
             save: "Save ₹15 more on UPI payment",
         },
@@ -134,7 +95,7 @@
             name: "Rockerz 558",
             rev: "5.0 | 2 reviews",
             discount:"60% off",
-            price: "1,999",
+            price: "2999",
             strikedoffprice: "4,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -143,7 +104,7 @@
             name: "Rockerz 450 Pro",
             rev: "4.7 | 67 reviews",
             discount:"50% off",
-            price: "1,999",
+            price: "1999",
             strikedoffprice: "3,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -152,7 +113,7 @@
             name: "Rockerz 400",
             rev: "4.8 | 95 reviews",
             discount:"50% off",
-            price: "1,499",
+            price: "1499",
             strikedoffprice: "2,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -161,7 +122,7 @@
             name: "Rockerz 450",
             rev: "4.8 | 266 reviews",
             discount:"67% off",
-            price: "1,299",
+            price: "1299",
             strikedoffprice: "3,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -170,7 +131,7 @@
             name: "Rockerz 560",
             rev: "4.8 | 18 reviews",
             discount:"57% off",
-            price: "1,699",
+            price: "1699",
             strikedoffprice: "3,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -179,7 +140,7 @@
             name: "Rockerz 425",
             rev: "4.9 | 22 reviews",
             discount:"53% off",
-            price: "1,399",
+            price: "1399",
             strikedoffprice: "2,990",
             save: "Save ₹15 more on UPI payment",
         },
@@ -188,7 +149,7 @@
             name: "TRebel Rockerz 550",
             rev: "5.0 | 6 reviews",
             discount:"60% off",
-            price: "1,999",
+            price: "1999",
             strikedoffprice: "4,999",
             save: "Save ₹15 more on UPI payment",
         },
@@ -197,15 +158,18 @@
             name: "Rockerz 600",
             rev: "4.8 | 34 reviews",
             discount:"50% off",
-            price: "1,999",
+            price: "1999",
             strikedoffprice: "3,990",
             save: "Save ₹15 more on UPI payment",
         },
     ];
+    
+
     //Function to append products//
     showList(rockHead);
 
     function showList(rockHead){
+        document.getElementById("parent").innerHTML = ""
         rockHead.map(function(elem){
 
             var div = document.createElement("div");
@@ -222,10 +186,19 @@
             name.textContent=elem.name;
             name.setAttribute("class","name");
 
+            ////////
+            var stars = document.createElement("i");
+            stars.setAttribute("class", "fa-solid fa-star");
+
             var rev = document.createElement("p");
             rev.textContent=elem.rev;
             rev.setAttribute("class","rev");
 
+            reviewBox = document.createElement("div");
+            reviewBox.setAttribute("class","reviewBox");
+            reviewBox.append(stars, rev);
+            ///
+            var x = document.createElement("hr");
             var discount = document.createElement("p");
             discount.textContent=elem.discount;
             discount.setAttribute("class","discount");
@@ -254,77 +227,50 @@
             // Constist of all contest in side of image
             var description = document.createElement("div");
             description.setAttribute("class","description");
-            description.append(name,rev,priceparent,save,cartbtn);
+            description.append(name,reviewBox,x,priceparent,save,cartbtn); ///
 
             div.append(imgBx,description);
             document.getElementById("parent").append(div);
         });
     }
     
-    //Sorting function //
-    // document.getElementById("sort").addEventListener("onclick",function(){
-    //     sortName();
-    // });
+    //Sorting 
+    function sortFun(){
+        var selected=document.querySelector("#sort").value;
+        var sortProduct ;
+        if(selected=="Sort by Featured"){
+            console.log(rockHead);
+            sortProduct =  rockHead; 
+        }
+        else if(selected=="Price, low to high"){
+          sortProduct =  rockHead.sort(function(a,b){
+            return parseFloat(a.price)-parseFloat(b.price)
+        })  
+        }
+        else if(selected=="Price, high to low"){
+            sortProduct =  rockHead.sort(function(a,b){
+            return parseFloat(b.price)-parseFloat(a.price)
+        })  
+        }
 
-    // function sortName(){
-    //   document.getElementById("body").textContent="";
-    //   if(document.getElementById("order").textContent == "Ascending"){
-    //     for(let i=0;i<jobList.length-1;i++){
-    //       for(let j=i+1;j<jobList.length;j++){
-    //         const string1 = jobList[i].name;
-    //         const string2 = jobList[j].name;
-    //         if(string1>string2){
-    //           var temp = jobList[i];
-    //           jobList[i]=jobList[j];
-    //           jobList[j]=temp;
-    //         }
-    //       }  
-    //     }
+        else if(selected==="Alphabetically, A-Z"){
+            sortProduct =  rockHead.sort(function(a,b){
+                if(a.name>b.name) return 1;
+                if(a.name<b.name) return -1;
+                return 0;
+            });  
+        }
 
-    //     document.getElementById("body").textContent="";
-    //     showList();
+        else if(selected==="Alphabetically, Z-A"){
+            sortProduct =  rockHead.sort(function(a,b){
+                if(a.name>b.name) return -1;
+                if(a.name<b.name) return 1;
+                return 0;
+        })  
+        }
 
-    //     document.getElementById("order").textContent = "Descending";
-    //   } 
-    //   else{
-    //   document.getElementById("body").textContent="";
+        console.log(sortProduct)
 
-    //     for(let i=0;i<jobList.length-1;i++){
-    //       for(let j=i+1;j<jobList.length;j++){
-    //         const string1 = jobList[i].name;
-    //         const string2 = jobList[j].name;
-    //         if(string1<string2){
-    //           var temp = jobList[i];
-    //           jobList[i]=jobList[j];
-    //           jobList[j]=temp;
-    //         }
-    //       }  
-    //     }
+        return showList(sortProduct);
+    }
 
-    //     showList();
-
-    //     document.getElementById("order").textContent = "Ascending";
-    //   }
-    // }
-
-    
-    // function sortFun(){
-    //     var valT=document.querySelector("#sort").value;
-    //     console.log(valT);
-    //     if(valT==""){
-    //         showList(elem);
-    //     }else if(valT=="price, low to high"){
-    //         elem.sort(function(a,b){
-    //         return (Number(b.price)-Number(a.price))
-    //     })
-    //     showList(elem);
-        
-    //     }else{
-    //         elem.sort(function(a,b){
-    //             return (Number(a.price)-Number(b.price))
-    //     })
-    //     showList(elem);
-    //     }
-    // }
-
-</script>
