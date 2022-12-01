@@ -65,6 +65,7 @@ a:hover:after{
 }
 
 /* body */
+
 .strip{
     display: flex;
     height: 80px;
@@ -109,23 +110,189 @@ a:hover:after{
    grid-template-columns: repeat(8, 1fr);
    padding-left: 30px;
    padding-top: 30px;
+   padding-bottom: 30px;
 }
 .category > div >div{
     width: 150px;
     text-align: center;
+    font-size: 12px;
     font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 /* daily deals */
 #daily-deals{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* gap: 10px; */
+    column-gap: 20px;
     width: 90%;
     margin: auto;
     
 }
-
+#daily-deals > div >div{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+#daily_deals_h1{
+    padding-left: 5%;
+    
+}
+.daily_deals_pro_name{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 30px 0px;   
+}
+.daily_deals_pro_img{
+    width: 100%;
+    height: 300px;    
+}
+.strikeoffprice{
+    text-decoration: line-through;
+  }
+.add_to_cart_button{
+    background-color: red;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0px;
+}
+/* display pic(middle) */
+    .display_pic{
+        display: grid;  
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: 90%;
+        margin: auto;    
+    }    
+    .display_pic >div >img{
+        width: 100%;
+        height: 100%;
+    }
+/* best of boat */
+#best_of_boat_h1{
+    padding: 50px 5%;
+    
+}
+.best_of_boat_buttons{
+    display: flex; 
+    margin-left: 2%;
+    margin-right: 2%;  
+}
+.best_of_boat_buttons>button{
+    padding: 10px 50px;
+    margin: auto;
+    
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* best_of_boat_card */
+.best_of_boat{
+    margin: 30px 0;
+}
+.best_of_boat>div{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+}
+.best_of_boat_card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+} 
+.best_of_boat_card > img{
+    width: 100%;
+    height: 60%;
+}
+.best_of_boat_card > div{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.upi_p{
+    padding: 10px;
+}
+.best_of_boat_card>button{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+.strieoff_p{
+    text-decoration: line-through;
+}
+/* mid pic */
+#mid_pic{
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+}
+.pic{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+.pic > img{
+    width: 100%;
+}
+#pic1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    border: 1px solid black;
+    width: 90%;
+    background-color: black;
+    margin-left: 5%;
+    border-radius: 10px;
+    padding: 30px 0;
+    
+}
+#pic1>img{
+    width: 90%;
+    border-radius: 10px;
+    padding-left: 5%;
+}
+.in_the_press > h1{
+    font-size: 3em;
+    font-weight: bold;
+    padding: 50px 5%;
+}
+.in_the_press > p{
+    font-size: 2em;
+    text-align: center;
+}
+.in_the_press > div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin: 20px;
+    
+}
+.in_the_press > div >img{
+    width: 150px;
+    height: auto;
+    margin: auto;
+}
 
 /* footer */
  #border-box{
@@ -133,6 +300,7 @@ a:hover:after{
     color: white;
     text-align: center;
     font-size: 22px;
+    margin: 50px 0;
  }
  #border-box> p{
     width: 70%;
@@ -140,6 +308,44 @@ a:hover:after{
     margin: auto;
     padding: 30px 0px;
  }
+ #footer_li{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 10px;
+    padding: 10px;
+
+ }
+ #footer_li > div> ul{
+    columns: 2;
+    list-style: none;
+ }
+ #footer_logo_box{
+    width: 400px;
+    
+ }
+ #footer_logo_box > div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    width: 100%;
+
+    border: 1px solid red;
+    margin: 20px 0;
+    border-radius: 8px;
+    padding: 5px 10px;
+ }
+ #footer_logo_box > div> button, input{  
+    
+    border-radius: 8px;
+    font-size: 15px;
+    border: none;
+    
+    
+ }
+ #footer_logo_box > div> button{
+    background-color: red;
+    padding: 10px 40px;
+ }
+
 
 
 
