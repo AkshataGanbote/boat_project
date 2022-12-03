@@ -335,9 +335,9 @@ function displayData(){
   }
   document.querySelector(".mouse").addEventListener("mouseover",displayData)
   
-  function removeData(){
+function removeData(){
     var keep = document.querySelector(".curser")
     keep.style.display = "none";
-  }
-  document.querySelector("body").addEventListener("mouseleave",removeData)
+}
+document.querySelector("body").addEventListener("mouseleave",removeData)
    

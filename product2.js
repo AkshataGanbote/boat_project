@@ -207,7 +207,7 @@ showList(productsList);
 
 function showList(productsList){
     document.getElementById("parent").innerHTML = "";
-    productsList.map(function(elem){
+    productsList.map(function(elem, i){
 
         var div = document.createElement("div");
         div.setAttribute("class","card");
@@ -239,9 +239,9 @@ function showList(productsList){
 
         var x = document.createElement("hr");
 
-        var discount = document.createElement("p");
-        discount.textContent=elem.discount;
-        discount.setAttribute("class","discount");
+        var disc = document.createElement("p");
+        disc.textContent=elem.disc;
+        disc.setAttribute("class","disc");
 
         var priceEle = document.createElement("p");
         priceEle.setAttribute("class","price");
@@ -254,25 +254,29 @@ function showList(productsList){
         // Consists of Disc, Price & Striked Price
         var priceparent = document.createElement("div");
         priceparent.setAttribute("class","priceparent");
-        priceparent.append(discount,priceEle,strikedoffprice);
+        priceparent.append(disc,priceEle,strikedoffprice);
 
         var save = document.createElement("p");
         save.textContent=elem.save;
         save.setAttribute("class","save");
 
-        var cartbtn = document.createElement("button");
-        cartbtn.textContent="ADD TO CART";
-        cartbtn.setAttribute("class","cartbtn");
+        var shopCartbtn = document.createElement("button");
+        shopCartbtn.textContent="ADD TO CART";
+        shopCartbtn.setAttribute("class","shopCartbtn");
+        shopCartbtn.addEventListener("click", function() {
+            addtocart(i);
+        });
 
         // Constist of all contents in side of image
         var description = document.createElement("div");
         description.setAttribute("class","description");
-        description.append(name,reviewBox,x,priceparent,save,cartbtn); ///
+        description.append(name,reviewBox,x,priceparent,save,shopCartbtn); ///
 
         div.append(imgBx,description);
         document.getElementById("parent").append(div);
     });
 }
+
 
 //Sorting 
 function sortFun(){
@@ -283,7 +287,7 @@ function sortFun(){
         sortProduct =  productsList; 
     }
     else if(selected=="Price, low to high"){
-      sortProduct =  productsList.sort(function(a,b){
+        sortProduct =  productsList.sort(function(a,b){
         return parseFloat(a.price)-parseFloat(b.price);
     })  
     }
@@ -313,3 +317,66 @@ function sortFun(){
 
     return showList(sortProduct);
 }
+
+
+// Add to Cart
+
+var cartProduct = JSON.parse(localStorage.getItem("cart")) || [];
+        
+function addtocart(index){
+    event.preventDefault()
+    alert("Product added to cart sucessfully !")
+    var flag = 0
+    var ind  = 0
+    var prod = productsList.filter(function(elem,i){
+        return i == index
+    })
+    var cartp = cartProduct.filter(function(elem,i){
+        if(elem.name === prod[0].name){
+            flag = 1
+            ind = i
+        }
+    })
+    if(flag == 0){
+        prod[0].qty = 1
+        cartProduct.push(prod[0])
+    }
+    else{
+        cartProduct[ind].qty++
+        flag = 0
+    }
+    localStorage.setItem("cart",JSON.stringify(cartProduct))
+    console.log(cartProduct)
+    var cartItems = JSON.parse(localStorage.getItem("cart")) || []
+        var items =  cartItems.length
+        console.log(items)
+        if(items>0){
+        document.querySelector(".nitems").textContent = items
+        }
+    
+}
+      
+var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+var items =  cartItems.length;
+console.log(items);
+if(items>0){
+    document.querySelector(".nitems").textContent = items
+}
+
+// Mouse Moves
+
+function displayData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "grid";
+    keep.style.background = "white";
+    document.querySelector("body").addEventListener("mouseleave",removeData)
+  }
+  document.querySelector(".mouse").addEventListener("mouseover",displayData)
+  
+function removeData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "none";
+}
+
+document.querySelector("body").addEventListener("mouseleave",removeData)
+   
