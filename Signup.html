@@ -11,10 +11,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
-
-
-
-
 #header{
         display: flex;
         justify-content: space-around;
@@ -106,10 +102,6 @@
     .logo{
         margin-left: 40px;
     } 
-
-
-
-
 
 
  /*Signup Css*/
@@ -289,109 +281,7 @@
       color: black;
     }
     
-    /* sliding image partition*/
-    
-    html, body { 
-        height: 100%; 
-        margin: 0; 
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    
-    .slider, .slider .imgs {
-      width: 100%;
-      height: 100%;
-      max-height: 470px;
-      position: relative;
-    }
-    
-    .slider {
-        margin-top: 90px;
-        margin-bottom: 50px;
-      height: 75%;
-      max-height: 470px;
-      z-index: -1;
-    }
-    
-    .slider .imgs {
-      display: flex;
-      overflow: hidden;
-    }
-    
-    .slider .img {
-      min-width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      position: absolute;
-      left: 100%;
-      /* animation duration can't be greater than variable interval in JS! */
-      /* check JS for other settings */
-      animation: .6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s left;
-      animation-fill-mode: forwards;
-      background-size: cover !important;
-      background-position: 50% !important;
-    }
-    
-    /* Change images here */
-    .slider .img:nth-of-type(1) { background: url("https://cdn.shopify.com/s/files/1/0057/8938/4802/files/diwali-banner_2000x.gif?v=1664442921"); }
-    .slider .img:nth-of-type(2) { background: url("https://cdn.shopify.com/s/files/1/0057/8938/4802/files/DESKTOP-Banner-WB_4_2000x.gif?v=1664782144"); }
-    .slider .img:nth-of-type(3) { background: url("https://cdn.shopify.com/s/files/1/0057/8938/4802/files/diwali-banner_2000x.gif?v=1664442921"); }
-    .slider .img:nth-of-type(4) { background: url("https://cdn.shopify.com/s/files/1/0057/8938/4802/files/SN-Desktop-Banner-Wave-Style_1_2000x.jpg?v=1663914840"); }
-    
-    .slider .img span {
-      padding: 7px 20px;
-     
-      border-top-left-radius: 7px;
-      border-top-right-radius: 7px;
-      color: #f0f0f0;
-      font-size: 14px;
-      font-family: sans-serif;
-    }
-    
-    .dots {
-      position: absolute;
-      bottom: -18px;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-    
-    .dot {
-      width: 8px;
-      height: 8px;
-      background: gray;
-      border-radius: 50%;
-      margin: 0 3px;
-      cursor: pointer;
-    }
-    
-    .active-dot {
-      background: #3f3f3f;
-      cursor: default;
-    }
-    
-    @keyframes leftNext {
-      from { left: 100%; }
-      to { left: 0; }
-    }
-    
-    @keyframes leftCurr {
-      from { left: 0; }
-      to { left: -100%; }
-    }
-    
-    @keyframes rightNext {
-      from { left: -100%; }
-      to { left: 0; }
-    }
-    
-    @keyframes rightCurr {
-      from { left: 0; }
-      to { left: 100%; }
-    }
+ 
 </style>
 </head>
 
@@ -417,12 +307,6 @@
             </div>
         </div>
 
-
-
-    
-    
-
-
     <div id="signup">
         <div id="container">
           <h1>Register</h1>
@@ -442,7 +326,6 @@
 
       <!--Footer-->
 
-
       <div class="blackBack">
         <p>
           India's fastest growing audio & wearables brand. The most incredible 
@@ -451,8 +334,6 @@
         boAt will get you sailing!
         </p>
       </div>
-  
-
   
       <div id="footer1">
         <div>
@@ -537,11 +418,62 @@
       </div>
       <div class="line"></div>
       <p>© 2022 Imagine Marketing Limited. All Rights Reserved.</p><br>
-  
       
   </body>
   </html>
+
   
-    
-</body>
-</html>
+  <script>
+    function displayData() {
+    var keep = document.querySelector(".curser")
+    keep.style.display = "grid";
+    keep.style.background = "white";
+    document.querySelector("body").addEventListener("mouseleave", removeData)
+}
+document.querySelector(".mouse").addEventListener("mouseover", displayData)
+
+function removeData() {
+    var keep = document.querySelector(".curser")
+    keep.style.display = "none";
+}
+document.querySelector("body").addEventListener("mouseleave", removeData)
+
+
+document.querySelector("form").addEventListener("submit", create)
+
+let userData = JSON.parse(localStorage.getItem("userobj")) || []
+
+function create() {
+    event.preventDefault();
+    let userobj = {
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+    }
+    var flag = true;
+    userData.map(function (el) {
+        if (el.email == userobj.email) {
+            console.log("an");
+            flag = false;
+            alert("Account already exists")
+        }
+    });
+    if (flag) {
+        userData.push(userobj);
+        localStorage.setItem("userobj", JSON.stringify(userData))
+        alert("account created successfully")
+        location.href = "login.html"
+    }
+    document.getElementById("firstname").value = ""
+    document.getElementById("lastname").value = ""
+    document.getElementById("email").value = ""
+    document.getElementById("password").value = ""
+}
+
+var cartItems = JSON.parse(localStorage.getItem("cart")) || []
+var items = cartItems.length
+console.log(items)
+if (items > 0) {
+    document.querySelector(".nitems").innerText = items
+}
+  </script>
+  
